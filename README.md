@@ -21,8 +21,7 @@ conda env create -f environment.yml
 conda activate yane-2026.1
 ```
 
-# Overview of the workflow & functions
-## Workflow
+# Overview of the workflow & required functions and flags
 
 ![Overview of YAne workflow](yane_workflow_final.png)
 
@@ -325,7 +324,7 @@ The function `evaluateprimer` analyzes the primer-extracted datasets and generat
 | **Input** | `--i-mock` | Mock community table file path | Required |
 | | `--i-primer` | Primer table file path | Required |
 | | `--i-dir` | Preprocessed primer dataset directory path | Required |
-| | `--m-target-taxa` | Target taxa table file path |  Required |
+| | `--i-target-taxa` | Target taxa table file path |  Required |
 | **Output** | `--o-dir` | Evaluated primer datasets directory name |  Required |
 | **Parameters** | `--p-tax-level` | Taxonomic level for grouping in primer evaluation results | Taxonomic levels: Kingdom, Phylum, Class, Order, Family, Genus, Species; Default = Class |
 | | `--p-vary-confidence` | Confidence values to be varied for target taxa classification | 0-1; Default = 0, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95, 0.96, 0.97, 0.98, 0.99, 1 |
