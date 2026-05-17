@@ -27,7 +27,7 @@ conda activate yane-2026.1
 
 # Inputs
 
-User-defined input tables are required to indicate **mock community** and **primer pairs** for *in-silico* PCR, and **target taxa** for primer evaluation.
+User-defined input tables are required to indicate **mock community** and **primer pairs** for *in-silico* PCR, and **target taxa** for primer evaluation. All tables must be in a **tab-delimited** file format.
 
 We define mock community, primer pairs and target taxa as:
 * **Mock community**: sequence and taxonomic information of organisms assumed to be in the environment prior to extraction with primers.
@@ -85,7 +85,7 @@ We define mock community, primer pairs and target taxa as:
 ## 3. Target taxa
 * A target taxa table is used to specify targets that you aim to detect with candidate primers based on eDNA metabarcoding. 
 * This table consisted of a **header** indicating **taxonomic level** that the target taxa labels belong to (Taxonomic level (case-sensitive): Kingdom, Phylum, Class, Order, Family, Genus, or Species only). 
-* The table **contents** are **target taxa labels** that cover all of the target species. Taxa names are based on the [NCBI Taxonomy Database](https://www.ncbi.nlm.nih.gov/taxonomy) , which can be searched through the [NCBI Taxonomy Browser](https://www.ncbi.nlm.nih.gov/datasets/taxonomy/tree/).
+* The table **contents** are **target taxa labels** that cover all of the target species. Taxa names are based on the [NCBI Taxonomy Database](https://www.ncbi.nlm.nih.gov/taxonomy) , which can be searched through the [NCBI Taxonomy Browser](https://www.ncbi.nlm.nih.gov/datasets/taxonomy/tree/). The table's file name will be further used for file names of the primer evaluaiton results.
 
 *We used cetaceans and sirenians family names as our taxa labels as they covered all species in this group.*
 
@@ -336,7 +336,7 @@ The function `evaluateprimer` analyzes the primer-extracted datasets and generat
 | | `--i-target-taxa` | Target taxa table file path |  Required |
 | **Output** | `--o-dir` | Directory name of output for primer evaluation step |  Required |
 | **Parameters** | `--p-tax-level` | Taxonomic level for grouping in primer evaluation results | Taxonomic levels: Kingdom, Phylum, Class, Order, Family, Genus, Species; Default = Class |
-| | `--p-vary-confidence` | Confidence values to be varied for target taxa classification | 0-1; Default = 0, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95, 0.96, 0.97, 0.98, 0.99, 1 |
+| | `--p-vary-confidence` | Confidence values to be varied for target taxa classification | 0-1; Default = 0*, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95, 0.96, 0.97, 0.98, 0.99, 1; *Confidence = 0 is required to be included in the customized variations. |
 
 ## Usage Examples
 
@@ -374,6 +374,8 @@ yane evaluateprimer \
 --o-dir primer_eval_varyconf \
 --p-vary-confidence 0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1
 ```
+
+*Note: Confidence = 0 is required to be included in the customized variations.*
 
 ### Example #4: Evaluate primers based on the data preparation dataset with customized length 
 The `--i-dir` is set to `data_prep_customlen`, the output directory from length customization.
