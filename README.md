@@ -336,7 +336,7 @@ The function `evaluateprimer` analyzes the primer-extracted datasets and generat
 | | `--i-target-taxa` | Target taxa table file path |  Required |
 | **Output** | `--o-dir` | Directory name of output for primer evaluation step |  Required |
 | **Parameters** | `--p-tax-level` | Taxonomic level for grouping in primer evaluation results | Taxonomic levels: Kingdom, Phylum, Class, Order, Family, Genus, Species; Default = Class |
-| | `--p-vary-confidence` | Confidence values to be varied for target taxa classification | 0-1; Default = 0*, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95, 0.96, 0.97, 0.98, 0.99, 1; *Confidence = 0 is required to be included in the customized variations. |
+| | `--p-vary-confidence` | Confidence values to be varied for target taxa classification | 0-1; Default = 0*, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95, 0.96, 0.97, 0.98, 0.99, 1*; *Confidence = 0 ans 1 are required to be included in the customized variations, arranged as the first and the last order. |
 
 ## Usage Examples
 
@@ -375,7 +375,7 @@ yane evaluateprimer \
 --p-vary-confidence 0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1
 ```
 
-*Note: Confidence = 0 is required to be included in the customized variations.*
+*Note: Confidence = 0 ans 1 are required to be included in the customized variations, arranged as the first and the last order.*
 
 ### Example #4: Evaluate primers based on the data preparation dataset with customized length 
 The `--i-dir` is set to `data_prep_customlen`, the output directory from length customization.
