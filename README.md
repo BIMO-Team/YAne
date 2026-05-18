@@ -7,7 +7,7 @@ This package is equiped with functions to perform data retrieval from NCBI (mock
 # Package installation
 **1. Download package (Unix)**
 
-Download the pacakge by clicking the "zip" icon on the top right of the page. 
+To download the pacakge, click the following link: https://anonymous.4open.science/api/repo/YAne-1406/zip
 
 **2. Install package dependencies and create environment**
 
