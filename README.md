@@ -23,6 +23,12 @@ conda env create -f environment.yml
 conda activate yane-2026.1
 ```
 
+**4. Test YAne installation**
+
+```bash
+yane --help
+```
+
 # Overview of the workflow & required functions and flags
 
 ![Overview of YAne workflow](yane_workflow_final.png)
