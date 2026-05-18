@@ -11,7 +11,7 @@ To download the pacakge, use the following link: https://anonymous.4open.science
 
 **2. Install package dependencies and create environment**
 
-We used a Conda environment configuration file (`yane-env-linux.yml`) to manage all software dependencies. In the package's main directory, execute the following command to download all dependencies and create a new conda environment called `yane-2026.1`.
+We used a Conda environment configuration file (`yane-env-linux.yml`) to manage all software dependencies. In the package's main directory, execute the following command to download all dependencies and create a new conda environment called `yane-2026.2`.
 
 ```bash
 conda env create -f yane-env-linux.yml
