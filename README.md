@@ -6,7 +6,8 @@ This package is equiped with functions to perform data retrieval from NCBI (mock
 
 # Package installation
 **1. Download package (Unix)**
-Download pacakge using "zip" icon on the top right. 
+
+Download the pacakge by clicking the "zip" icon on the top right of the page. 
 
 **2. Install package dependencies and create environment**
 
