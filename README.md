@@ -106,8 +106,9 @@ We define mock community, primer pairs and target taxa as:
 
 ## 3. Target taxa
 * A target taxa table is used to specify targets that you aim to detect with candidate primers based on eDNA metabarcoding. 
-* This table consisted of a **header** indicating **taxonomic level** that the target taxa labels belong to (Taxonomic level (case-sensitive): Kingdom, Phylum, Class, Order, Family, Genus, or Species only), and saved as tab-delimited file format.
+* This table consisted of a **header** indicating **taxonomic level** that the target taxa labels belong to (Taxonomic level (case-sensitive): Kingdom, Phylum, Class, Order, Family, Genus, or Species only).
 * The table **contents** are **target taxa labels** that cover all of the target species. Taxa names are based on the [NCBI Taxonomy Database](https://www.ncbi.nlm.nih.gov/taxonomy) , which can be searched through the [NCBI Taxonomy Browser](https://www.ncbi.nlm.nih.gov/datasets/taxonomy/tree/). The table's file name will be further used for file names of the primer evaluation results.
+* This table is saved as tab-delimited file format and will be used as input for the function `evaluateprimer`.
 
 *We used cetaceans and sirenians family names as our taxa labels as they covered all species in this group.*
 
