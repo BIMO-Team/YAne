@@ -20,7 +20,7 @@ conda env create -f yane-env-linux.yml
 **3. Activate conda environment**
 
 ```bash
-conda activate yane-2026.1
+conda activate yane-2026.2
 ```
 
 **4. Test YAne installation**
