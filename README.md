@@ -5,7 +5,8 @@ YAne is a python package for eDNA metabarcoding primer evaluation and database c
 This package is equiped with functions to perform data retrieval from NCBI (mock community), simulate *in-silico* PCR based on primer pairs, filter homopolymers, degenerate bases and sequence lengths, and evaluate primer performance based on specificity, amplicon length, reference database availability, and taxonomic resolution. Simultaneously, primer-specific databases are constructed in a format of Naive Bayes classifiers to be used for taxonomic assignment with QIIME2.
 
 # Package installation
-**1. Download package (Unix)**: https://anonymous.4open.science/r/YAne-1406
+**1. Download package (Unix)**
+Download pacakge using "zip" icon on the top right. 
 
 **2. Install package dependencies and create environment**
 
