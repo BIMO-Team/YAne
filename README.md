@@ -5,16 +5,16 @@ YAne is a python package for eDNA metabarcoding primer evaluation and database c
 This package is equiped with functions to perform data retrieval from NCBI (mock community), simulate *in-silico* PCR based on primer pairs, filter homopolymers, degenerate bases and sequence lengths, and evaluate primer performance based on specificity, amplicon length, reference database availability, and taxonomic resolution. Simultaneously, primer-specific databases are constructed in a format of Naive Bayes classifiers to be used for taxonomic assignment with QIIME2.
 
 # Package installation
-**1. Download package (Unix)**
+**1. Download package (Linux-64)**
 
 To download the pacakge, use the following link: https://anonymous.4open.science/api/repo/YAne-1406/zip
 
 **2. Install package dependencies and create environment**
 
-We used a Conda environment configuration file (`environment.yml`) to manage all software dependencies. In the package's main directory, execute the following command to download all dependencies and create a new conda environment called `yane-2026.1`.
+We used a Conda environment configuration file (`yane-env-linux.yml`) to manage all software dependencies. In the package's main directory, execute the following command to download all dependencies and create a new conda environment called `yane-2026.1`.
 
 ```bash
-conda env create -f environment.yml
+conda env create -f yane-env-linux.yml
 ```
 
 **3. Activate conda environment**
@@ -28,6 +28,20 @@ conda activate yane-2026.1
 ```bash
 yane --help
 ```
+```bash
+yane downloadmock --help
+```
+```bash
+yane processprimer --help
+```
+```bash
+yane customlength --help
+```
+
+```bash
+yane evaluateprimer --help
+```
+If successfully installed, the instruction of command usage will be shown. 
 
 # Overview of the workflow & required functions and flags
 
