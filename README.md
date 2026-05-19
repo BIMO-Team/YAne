@@ -57,7 +57,7 @@ We define mock community, primer pairs and target taxa as:
 * **Target taxa**: target organisms for detection with eDNA metabarcoding using the candidate primers
 
 
-*As demonstration, we used vertebrates as our mock community, and 8 primer pairs on 12S, 16S, and D-loop to conduct *in-silico* PCR against the mock community. Cetaceans (whales and dolphins) and Sirenians (dugongs and manatees) are our target taxa we aimed to detect with eDNA metabarcoding.*
+*As demonstration, we used vertebrates as our mock community, and 8 primer pairs on 12S, 16S, and D-loop to conduct *in-silico* PCR against the mock community. Cetaceans (whales and dolphins) and Sirenians (dugongs and manatees) are our target taxa we aimed to detect with eDNA metabarcoding. To run the pipeline to completion using our example datasets, at least 15 GB of available space is required.* 
 
 **Table 1** File paths of inputs in the example dataset
 
@@ -134,7 +134,7 @@ We define mock community, primer pairs and target taxa as:
 
 # Data preparation
 ## 1. Download mock community
-The function `downloadmock` downloads and dereplicates mock community sequences and taxonomic information from NCBI. 
+The function `downloadmock` downloads and dereplicates mock community sequences and taxonomic information from NCBI. Please note that large download (more than 100 requests) need to be done on weekends or between 9 pm and 5 am Eastern Time weekdays according to [NCBI Policy](https://www.ncbi.nlm.nih.gov/home/about/policies/).
 
 ### Command-Line Options
 * For description and usage of the function and its flags, execute `yane downloadmock --help`.
@@ -154,12 +154,13 @@ The function `downloadmock` downloads and dereplicates mock community sequences 
 * NCBI data downloading period: `1.26` (January 2026)
 
 #### Example #1: Default jobs and threads
+*To test this command with our example datasets, please run on weekends or between 9 pm and 5 am Eastern Time weekdays according to NCBI policy for large downloads.*
 
 ```bash
 yane downloadmock \
 --i-mock examples/mock_community.txt \
 --p-taxa 7742 \
---p-dl-period 1.26
+--p-dl-period 1.26 #modify to month and year of your data retrieval
 ```
 
 #### Example #2: Customized threads = 8
@@ -168,8 +169,8 @@ yane downloadmock \
 yane downloadmock \
 --i-mock examples/mock_community.txt \
 --p-taxa 7742 \
---p-dl-period 1.26 \
---p-threads 8
+--p-dl-period 1.26 #modify to month and year of your data retrieval \ 
+--p-threads 8 
 ```
 
 ## 2. *In-silico* PCR and clean the extracted datasets
