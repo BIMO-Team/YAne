@@ -1,0 +1,11 @@
+class	min	max
+Actinopteri	204	243
+Amphibia	165	226
+Aves	205	215
+Chondrichthyes	222	240
+Cladistia	215	219
+Hyperoartia	191	195
+Lepidosauria	141	201
+Mammalia	189	206
+Myxini	198	204
+Sarcopterygii	195	214

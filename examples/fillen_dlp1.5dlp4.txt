@@ -1,0 +1,7 @@
+class	min	max
+Actinopteri	137	775
+Amphibia	118	463
+Aves	77	1270
+Lepidosauria	245	4140
+Mammalia	199	656
+Sarcopterygii	170	4970
