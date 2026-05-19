@@ -153,7 +153,7 @@ The function `downloadmock` downloads and dereplicates mock community sequences 
 * Mock community Taxa ID: `7742` (Vertebrates)
 * NCBI data downloading period: `1.26` (January 2026)
 
-#### Example #1: Default jobs and threads
+#### Example #1: Default parameters
 *To test this command with our example datasets, please run on weekends or between 9 pm and 5 am Eastern Time weekdays according to NCBI policy for large downloads.*
 
 ```bash
