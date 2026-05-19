@@ -1,9 +1,0 @@
-class	min	max
-Actinopteri	51	59
-Amphibia	50	55
-Aves	52	59
-Chondrichthyes	50	53
-Cladistia	51	52
-Lepidosauria	50	59
-Mammalia	51	65
-Sarcopterygii	50	62
