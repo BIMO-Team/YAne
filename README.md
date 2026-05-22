@@ -138,7 +138,7 @@ The function `downloadmock` downloads and dereplicates mock community sequences 
 
 ### Command-Line Options
 * For description and usage of the function and its flags, execute `yane downloadmock --help`.
-* Outputs from this step are downloaded sequence and taxonomic information from NCBI database in QIIME2's artifact file format (`sequence.qza` and `taxonomy.qza`) located in the automatically generated directory called `NCBI_data` 
+* Outputs from this step are downloaded sequence and taxonomic information from NCBI database in QIIME2's artifact file format (`sequence.qza` and `taxonomy.qza`) located in the automatically generated directory called `NCBI_data`. This directory will be generated at the location where the command `yane downloadmock` is run, and users are required to stay in the same directory to successfully run other yane's commands throughout the processes. 
 
 | Category | Flag | Description | Remarks |
 | :--- | :--- | :--- | :--- |
