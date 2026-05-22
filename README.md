@@ -11,7 +11,7 @@ To download the pacakge, use the following link: https://anonymous.4open.science
 
 **2. Install package dependencies and create environment**
 
-We used a Conda environment configuration file (`yane-env-linux.yml`) to manage all software dependencies. In the package's main directory, execute the following command to download all dependencies and create a new conda environment called `yane-2026.2`.
+We used a Conda environment configuration file (`yane-env-linux.yml`) to manage all software dependencies. In the package's main directory, execute the following command to download all dependencies and create a new conda environment called `yane-2026.3`.
 
 ```bash
 conda env create -f yane-env-linux.yml
@@ -20,7 +20,7 @@ conda env create -f yane-env-linux.yml
 **3. Activate conda environment**
 
 ```bash
-conda activate yane-2026.2
+conda activate yane-2026.3
 ```
 
 **4. Test YAne installation**
@@ -358,6 +358,7 @@ The function `evaluateprimer` analyzes the primer-extracted datasets and generat
 | | `--i-primer` | Primer table file path | Required |
 | | `--i-dir` | Directory name of output from the data preparation step | Required |
 | | `--i-target-taxa` | Target taxa table file path |  Required |
+| | `--p-target-name` | Target taxa name for naming the output files | Required |
 | **Output** | `--o-dir` | Directory name of output for primer evaluation step |  Required |
 | **Parameters** | `--p-tax-level` | Taxonomic level for grouping in primer evaluation results | Taxonomic levels: Kingdom, Phylum, Class, Order, Family, Genus, Species; Default = Class |
 | | `--p-vary-confidence` | Confidence values to be varied for target taxa classification | 0-1; Default = 0*, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95, 0.96, 0.97, 0.98, 0.99, 1*; *Confidence = 0 and 1 are required to be included in the customized variations, arranged as the first and the last order. |
@@ -372,6 +373,7 @@ yane evaluateprimer \
 --i-primer examples/primer.txt \
 --i-dir data_prep \
 --i-target-taxa examples/cetacean.txt \
+--p-target-name cetaceans \
 --o-dir primer_eval
 ```
 
@@ -383,6 +385,7 @@ yane evaluateprimer \
 --i-primer examples/primer.txt \
 --i-dir data_prep \
 --i-target-taxa examples/cetacean.txt \
+--p-target-name cetaceans \
 --o-dir primer_eval_phylum \
 --p-tax-level Phylum
 ```
@@ -395,6 +398,7 @@ yane evaluateprimer \
 --i-primer examples/primer.txt \
 --i-dir data_prep \
 --i-target-taxa examples/cetacean.txt \
+--p-target-name cetaceans \
 --o-dir primer_eval_varyconf \
 --p-vary-confidence 0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1
 ```
@@ -410,5 +414,6 @@ yane evaluateprimer \
 --i-primer examples/primer.txt \
 --i-dir data_prep_customlen \
 --i-target-taxa examples/cetacean.txt \
+--p-target-name cetaceans \
 --o-dir primer_eval_customlen
 ```
