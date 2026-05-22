@@ -418,7 +418,7 @@ yane evaluateprimer \
 --o-dir primer_eval_customlen
 ```
 
-# Ouputs
+# Outputs
 * The result from data preparation step is the summarization of number of record through processing steps, saved in the directory `data_prep/results`
 * The overall primer evaluation results (specificity, availability, sequence length, and taxonomic resolution) are saved in the directory `primer_eval/results`. To dive down into specific information of the primer evaluation, please explore these directories: `primer_eval/specificity`, `primer_eval/availability`, `primer_eval/length`, and `primer_eval/resolution`
 * Classifiers built from the primer-extracted datasets are saved in the directory `primer_eval/classifier`. This can be used during taxonomic assignment steps based on QIIME2.
