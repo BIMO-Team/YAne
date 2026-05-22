@@ -143,8 +143,8 @@ The function `downloadmock` downloads and dereplicates mock community sequences 
 | Category | Flag | Description | Remarks |
 | :--- | :--- | :--- | :--- |
 | **Inputs** | `--i-mock` | Mock community table file path | Required | 
-|| `--p-taxa` | Mock community Taxa ID | Required |
-|| `--p-dl-period` | Data downloading period | Required |
+|| `--p-taxa` | Mock community Taxa ID or Taxa name (used in database naming) | Required |
+|| `--p-dl-period` | Data downloading period (used in database naming) | Required |
 | **Parameters** | `--p-jobs` | Number of concurrent download connection | Integer; Default = 5 |
 || `--p-threads` | Number of computation threads | Integer; Default = 4 |
 
