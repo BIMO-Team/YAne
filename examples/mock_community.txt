@@ -1,0 +1,2 @@
+mock	query
+mtDNA	txid7742[Organism] AND mitochondrion[Title] AND "complete genome"[Title] AND srcdb_refseq[Properties]
