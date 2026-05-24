@@ -57,7 +57,7 @@ We define mock community, primer pairs and target taxa as:
 * **Target taxa**: target organisms for detection with eDNA metabarcoding using the candidate primers
 
 
-*As demonstration, we used vertebrates as our mock community, and 8 primer pairs on 12S, 16S, and D-loop to conduct *in-silico* PCR against the mock community. Cetaceans (whales and dolphins) and Sirenians (dugongs and manatees) are our target taxa we aimed to detect with eDNA metabarcoding. To run the pipeline to completion using our example datasets, at least 15 GB of available space is required.* 
+*As demonstration, we used vertebrates as our mock community, and 8 primer pairs on 12S, 16S, and D-loop to conduct *in-silico* PCR against the mock community. Cetaceans (whales and dolphins) and Sirenians (dugongs and manatees) are our target taxa we aimed to detect with eDNA metabarcoding.* 
 
 **Table 1** File paths of inputs in the example dataset
 
@@ -77,13 +77,13 @@ We define mock community, primer pairs and target taxa as:
 
 * The table must be saved **tab-delimited** file format (See: `examples/mock_community.txt`), which will be used as an input for the functions `downloadmock`, `processprimer` and `evaluateprimer`. 
 
-*As demonstration, we used vertebrate (*txid7742[Organism]*) mitochondrial DNA of all lengths and regions (*mitochondrion[filter]*) as our mock community and filtered the records that are environmental samples and unclassified (*NOT uncultured[Title] NOT unclassified[Title] NOT unidentified[Title] NOT unverified[Title]*).*
+*RefSeq vertebrate mitochondrial genome are used as demonstration datasets.*
 
 **Table 2** An example of a mock community table
 
 | mock label | NCBI Entrez |
 | :--- | :--- |
-| mtDNA | txid7742[Organism] AND mitochondrion[filter] NOT "environmental samples"[Title] NOT "environment"[Title] NOT uncultured[Title] NOT unclassified[Title] NOT unidentified[Title] NOT unverified[Title] |
+| mtDNA | txid7742[Organism] AND mitochondrion[Title] AND "complete genome"[Title] AND srcdb_refseq[Properties] |
 
 ## 2. Primer pairs
 * A primer table is consisted of **primer labels**, **mock community labels** (indicate the mock that primers will be extracted from and must be similar to the labels in the mock community table), **forward primer sequences** (5' to 3'), and **reverse primer sequences** (5' to 3'). The columns must be strictly arranged like the ones shown in **Table 3**.
