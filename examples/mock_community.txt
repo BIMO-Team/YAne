@@ -1,2 +1,0 @@
-mock	query
-mtDNA	txid7742[Organism] AND mitochondrion[filter] NOT "environmental samples"[Title] NOT "environment"[Title] NOT uncultured[Title] NOT unclassified[Title] NOT unidentified[Title] NOT unverified[Title]
