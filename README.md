@@ -57,7 +57,7 @@ We define mock community, primer pairs and target taxa as:
 * **Target taxa**: target organisms for detection with eDNA metabarcoding using the candidate primers
 
 
-*As demonstration, we used vertebrates as our mock community, and 8 primer pairs on 12S, 16S, and D-loop to conduct *in-silico* PCR against the mock community. Cetaceans (whales and dolphins) and Sirenians (dugongs and manatees) are our target taxa we aimed to detect with eDNA metabarcoding.* 
+*As demonstration, vertebrates are used as a mock community, and 8 primer pairs on 12S, 16S, and D-loop are used to conduct *in-silico* PCR against the mock community. Cetaceans (whales and dolphins) and Sirenians (dugongs and manatees) are the target taxa aimed to be detected with eDNA metabarcoding. To reduce runtime when using the example datasets, we provided a small mock community dataset containing only NCBI RefSeq records. While real datasets can include all vertebrate records in NCBI to simulate real-world scenarios, their runtimes will be significantly longer.* 
 
 **Table 1** File paths of inputs in the example dataset
 
@@ -76,8 +76,6 @@ We define mock community, primer pairs and target taxa as:
 * Many mock communities can be downloaded simultaneously by adding more rows to the table and specify their labels. Users can use the primer table to indicate the mock community that primers will be extracted from.
 
 * The table must be saved **tab-delimited** file format (See: `examples/mock_community.txt`), which will be used as an input for the functions `downloadmock`, `processprimer` and `evaluateprimer`. 
-
-*RefSeq vertebrate mitochondrial genome are used as demonstration datasets.*
 
 **Table 2** An example of a mock community table
 
